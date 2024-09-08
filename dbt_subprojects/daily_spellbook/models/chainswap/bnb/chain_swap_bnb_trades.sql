@@ -69,7 +69,6 @@ with
     highest_event_index_for_each_trade as (
         select tx_hash, max(evt_index) as highest_event_index
         from bot_trades
-        group by tx_hash
     ),
     fee_deposits as (
         select
